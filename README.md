@@ -1,51 +1,138 @@
 <!---
 {
+  "id": "077e7849-3a02-4e7d-bdc9-c7ad443784fd",
   "depends_on": [],
   "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "first_used": "2025-04-11",
+  "keywords": ["quantum mechanics", "de-Broglie wavelength", "ionization energy", "relativistic physics", "wave-particle duality"]
 }
---->
+-->
 
-# Learning Through Exercises
+# de Broglie Wavelength and Ionizing Radiation
 
-## Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+> In this exercise you will learn how to compute key properties of electromagnetic radiation that is capable of ionizing a hydrogen atom. Furthermore we will explore how the de Broglie wavelength of particles depends on their kinetic energy, in classical, relativistic, and ultrarelativistic regimes.
+
+### Introduction
+
+In quantum mechanics, the concept of wave-particle duality is a cornerstone principle that extends across both electromagnetic waves and material particles. Photons, which constitute electromagnetic radiation, exhibit both wave-like and particle-like properties. This duality allows us to associate a frequency, wavelength, and wavenumber to photons with a given energy. For example, the ionization energy of a hydrogen atom defines the minimum photon energy required to remove an electron from its ground state.
+
+The de Broglie hypothesis further extends wave-particle duality to massive particles. According to de Broglie, every particle with momentum \( p \) can be associated with a wavelength \( \lambda = h/p \), where \( h \) is Planck’s constant. Depending on the kinetic energy of the particle and its mass, we must use different models to calculate its momentum: classical mechanics when the particle's speed is much less than the speed of light, and relativistic or ultrarelativistic models when velocities approach or exceed relativistic thresholds.
+
+This exercise guides you through calculating ionizing radiation properties and deriving the de Broglie wavelength for a variety of physical systems — from electrons to Higgs bosons, and even dust particles — each illustrating a different physical regime.
 
 ### Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
 
-## Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
+- [HyperPhysics: de Broglie Wavelength](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/debrog.html)
+- [DOI:10.1016/j.physletb.2012.08.020](https://doi.org/10.1016/j.physletb.2012.08.020) — Higgs boson discovery
+- [YouTube: de Broglie Wavelength Explained](https://www.youtube.com/watch?v=TItdkDdldvU)
 
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+---
 
-## Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+### Tasks
 
-## Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
+#### Part (a): Ionizing Radiation of Hydrogen
 
+Given the ionization energy of hydrogen in its ground state is:
+
+```
+E_ion = 13.6 eV
+```
+
+Compute the frequency \( \nu \), wavelength \( \lambda \), and wavenumber \( k \) of the photon required for ionization.
+
+**Step-by-step solution:**
+
+1. Use \( E = h \nu \) with \( h = 4.14 \times 10^{-15} \text{ eV·s} \):
+
+   \[
+   \nu = \frac{E_{\text{ion}}}{h} = \frac{13.6}{4.14 \times 10^{-15}} \approx 3.29 \times 10^{15} \, \text{Hz}
+   \]
+
+2. Calculate the wavelength using \( \lambda = \frac{c}{\nu} \) with \( c = 3.00 \times 10^8 \, \text{m/s} \):
+
+   \[
+   \lambda = \frac{3.00 \times 10^8}{3.29 \times 10^{15}} \approx 9.11 \times 10^{-8} \, \text{m} \quad (91 \, \text{nm})
+   \]
+
+3. Compute the wavenumber \( k = \frac{2\pi}{\lambda} \):
+
+   \[
+   k = \frac{2\pi}{9.11 \times 10^{-8}} \approx 6.89 \times 10^7 \, \text{m}^{-1}
+   \]
+
+#### Part (b): de Broglie Wavelengths for Various Particles
+
+Derive expressions and compute the de Broglie wavelength \( \lambda = \frac{h}{p} \) for different kinetic energies and physical cases.
+
+---
+
+##### Relativistic Case:
+
+\[
+E^2 = (pc)^2 + (m_0 c^2)^2 \Rightarrow p = \frac{\sqrt{E_{\text{kin}}^2 + 2 m_0 c^2 E_{\text{kin}}}}{c}
+\Rightarrow \lambda = \frac{h c}{\sqrt{E_{\text{kin}}^2 + 2 m_0 c^2 E_{\text{kin}}}}
+\]
+
+##### Classical (non-relativistic) Case:
+
+\[
+E_{\text{kin}} = \frac{p^2}{2m_0} \Rightarrow p = \sqrt{2 m_0 E_{\text{kin}}} \Rightarrow \lambda = \frac{h}{\sqrt{2 m_0 E_{\text{kin}}}}
+\]
+
+##### Ultrarelativistic Case:
+
+\[
+p \approx \frac{E_{\text{kin}}}{c} \Rightarrow \lambda = \frac{h c}{E_{\text{kin}}}
+\]
+
+---
+
+**Now compute the following:**
+
+1. **Electron, \( E_{\text{kin}} = 10 \text{ eV} \):**
+
+   Use classical model:
+
+   \[
+   m_e = 511 \times 10^3 \text{ eV}/c^2 \Rightarrow p = \sqrt{2 \cdot 511000 \cdot 10} = 3195 \text{ eV}/c
+   \Rightarrow \lambda \approx \frac{1.242 \times 10^{-6}}{3195} \approx 3.89 \times 10^{-10} \text{ m}
+   \]
+
+2. **Electron, \( E_{\text{kin}} = 1 \text{ GeV} \):**
+
+   Use ultrarelativistic model:
+
+   \[
+   \lambda = \frac{1.242 \times 10^{-6}}{1 \times 10^9} = 1.24 \times 10^{-15} \text{ m}
+   \]
+
+3. **Higgs boson, \( m = 125 \text{ GeV}/c^2, E_{\text{kin}} = 1 \text{ GeV} \):**
+
+   Use classical model:
+
+   \[
+   p = \sqrt{2 \cdot 125 \cdot 10^9 \cdot 10^9} = 1.58 \times 10^{10} \text{ eV}/c
+   \Rightarrow \lambda = \frac{1.242 \times 10^{-6}}{1.58 \times 10^{10}} \approx 7.86 \times 10^{-17} \text{ m}
+   \]
+
+4. **Dust particle, \( m = 10^{-12} \text{ kg}, v = 1 \text{ m/s} \):**
+
+   Use classical expression:
+
+   \[
+   \lambda = \frac{6.626 \times 10^{-34}}{10^{-12} \cdot 1} = 6.63 \times 10^{-22} \text{ m}
+   \]
+
+---
+
+### Questions
+
+1. Why can different models (classical, relativistic, ultrarelativistic) be used for the same formula depending on the regime?
+2. How does the de Broglie wavelength scale with particle mass and velocity? Provide examples from your calculations.
+3. Would it be feasible to detect the de Broglie wavelength of a dust particle? Why or why not?
+
+---
+
+### Advice
+
+This exercise is an excellent opportunity to integrate fundamental quantum mechanics with relativistic physics. Don’t rush through the derivations — understanding how the assumptions lead to different forms of momentum is key. When working with de Broglie wavelengths, always check the energy scale: electrons often allow classical approximations, but particles like Higgs bosons require careful relativistic treatment. For even more practice, try extending these calculations to protons or muons using similar steps as outlined here. Confidence builds with repetition — revisit this sheet when tackling problems involving particle-wave duality in other contexts.
