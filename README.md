@@ -3,6 +3,15 @@
   "id": "077e7849-3a02-4e7d-bdc9-c7ad443784fd",
   "depends_on": [],
   "author": "Stephan Bökelmann",
+  "first_used": "2025-05-19",
+  "keywords": ["deBroglie","Quantum-Mechanics"]
+}
+--->
+<!---
+{
+  "id": "077e7849-3a02-4e7d-bdc9-c7ad443784fd",
+  "depends_on": [],
+  "author": "Stephan Bökelmann",
   "first_used": "2025-04-11",
   "keywords": ["quantum mechanics", "de-Broglie wavelength", "ionization energy", "relativistic physics", "wave-particle duality"]
 }
